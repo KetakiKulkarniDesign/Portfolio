@@ -188,7 +188,7 @@ z-index:1;
 /* ABOUT */
 
 .about-section{
-margin-top:60px;
+margin-top:45px;
 max-width:750px;
 font-size:20px;
 line-height:1.9;
@@ -363,6 +363,55 @@ padding:40px 20px;
 
 .side-nav{
 display:none;
+}
+
+}
+
+/* EXPERIENCE STATS */
+
+.experience-stats{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:60px;
+text-align:center;
+}
+
+.stat h3{
+font-size:42px;
+color:#0f172a;
+}
+
+.stat p{
+color:#64748b;
+}
+
+
+/* WORK TITLE */
+
+.work-title{
+text-align:center;
+padding:40px 10%;
+}
+
+.work-title h2{
+font-size:36px;
+color:#0f172a;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width:900px){
+
+.experience-stats{
+flex-direction:column;
+gap:30px;
+}
+
+.work-title{
+padding:20px;
 }
 
 }
