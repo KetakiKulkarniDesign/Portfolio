@@ -100,8 +100,9 @@ gap:16px;
 margin-bottom:30px;
 }
 
-.btn-primary,
-.btn-secondary{
+/* PRIMARY BUTTON */
+
+.btn-primary{
 background:#F59E0B;
 color:black;
 padding:12px 28px;
@@ -111,10 +112,28 @@ text-decoration:none;
 transition:.3s;
 }
 
-.btn-primary:hover,
-.btn-secondary:hover{
+.btn-primary:hover{
 transform:translateY(-3px);
 box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* SECONDARY BUTTON */
+
+.btn-secondary{
+background:transparent;
+color:#0f172a;
+padding:12px 28px;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
+border:2px solid #0f172a;
+transition:.3s;
+}
+
+.btn-secondary:hover{
+background:#0f172a;
+color:white;
+transform:translateY(-3px);
 }
 
 
@@ -238,7 +257,6 @@ margin-bottom:10px;
 background:#ffffff;
 text-align:center;
 align-items:center;
-
 border-top:1px solid #e2e8f0;
 
 opacity:0;
@@ -294,15 +312,53 @@ transform:translateY(0);
 .hero-content{
 flex-direction:column;
 text-align:center;
+gap:40px;
 }
 
 .hero-text h1{
-font-size:60px;
+font-size:48px;
+}
+
+.hero-desc{
+font-size:16px;
+}
+
+.hero-image img{
+width:220px;
+}
+
+.hero-buttons{
+flex-direction:column;
+gap:12px;
+align-items:center;
+}
+
+.btn-primary,
+.btn-secondary{
+width:200px;
+text-align:center;
+}
+
+.project-text{
+font-size:18px;
+}
+
+.project-text h3{
+font-size:26px;
 }
 
 .project-image img{
 width:95%;
 max-height:55vh;
+}
+
+.contact-info{
+flex-direction:column;
+gap:40px;
+}
+
+section{
+padding:40px 20px;
 }
 
 .side-nav{

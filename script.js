@@ -1,38 +1,37 @@
-const navLinks = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll("section");
+const homeLink = document.querySelector('a[href="#home"]');
+const workLink = document.querySelector('a[href="#project1"]');
+const contactLink = document.querySelector('a[href="#contact"]');
+
+const homeSection = document.getElementById("home");
+const project1 = document.getElementById("project1");
+const contactSection = document.getElementById("contact");
 
 window.addEventListener("scroll", () => {
 
-let currentSection = "";
+const scrollY = window.scrollY;
 
-sections.forEach(section => {
+/* section positions */
 
-const sectionTop = section.offsetTop;
-const sectionHeight = section.offsetHeight;
+const homeTop = homeSection.offsetTop;
+const workTop = project1.offsetTop;
+const contactTop = contactSection.offsetTop;
 
-if(pageYOffset >= sectionTop - 300 && pageYOffset < sectionTop + sectionHeight - 300){
+/* reset */
 
-currentSection = section.getAttribute("id");
+homeLink.classList.remove("active");
+workLink.classList.remove("active");
+contactLink.classList.remove("active");
 
+/* logic */
+
+if(scrollY < workTop - 200){
+homeLink.classList.add("active");
 }
-
-});
-
-
-navLinks.forEach(link => {
-
-link.classList.remove("active");
-
-const href = link.getAttribute("href").replace("#","");
-
-
-if(
-href === currentSection ||
-(href === "project1" && currentSection.includes("project"))
-){
-link.classList.add("active");
+else if(scrollY >= workTop - 200 && scrollY < contactTop - 200){
+workLink.classList.add("active");
 }
-
-});
+else{
+contactLink.classList.add("active");
+}
 
 });
